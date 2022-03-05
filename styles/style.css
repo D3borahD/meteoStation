@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #39519c;
+  color: #f4f7ff;
+  font-size: 24px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+}
+
+nav {
+  height: 100%;
+  width: 200px;
+  background: #071a51;
+}
+
+.brand {
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.brand span {
+  background: linear-gradient(135deg, #3c7af6 0%, #d239f6 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box {
+  border-radius: 8px;
+  background: rgba(223, 226, 237, 0.23);
+  text-align: center;
+  padding-top: 1px;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25), inset 0px 5px 5px rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25), inset 0px 5px 5px rgba(255, 255, 255, 0.25);
+}
+
+.box span {
+  font-size: 2.5em;
+}
+
+.main {
+  margin-right: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr 1fr 1fr;
+      grid-template-columns: 200px 1fr 1fr 1fr;
+  -ms-grid-rows: 275px auto;
+      grid-template-rows: 275px auto;
+  gap: 30px 30px;
+      grid-template-areas: "sidebar clock temperature humidity" "sidebar graph graph graph";
+}
+
+.sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+.clock,
+.temperature,
+.humidity {
+  margin-top: 2em;
+}
+
+.clock {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: clock;
+}
+
+.temperature {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: temperature;
+}
+
+.humidity {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: humidity;
+}
+
+.graph {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: graph;
+  margin-bottom: 2em;
+}
+
+.graph img {
+  width: 90%;
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+  }
+  .box {
+    margin: 1em;
+  }
+  .main {
+    margin: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    gap: 0;
+        grid-template-areas: "sidebar" "clock" "temperature" "humidity" "graph";
+  }
+}
+/*# sourceMappingURL=style.css.map */
